@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+}
+
+@keyframes GoToRight{
+    from{
+        transform: translateX(-235px);
+    }
+    to{
+        transform: translateX(+235px);
+    }
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+body{
+    margin: 0;
+    padding:0;
+    height: 100vh;
+    background: black;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+
+.pixel-font-headline {
+  font-family: 'Press Start 2P', monospace; /* Use 2P, with monospace as a backup */
+  
+  /* IMPORTANT: Add these lines to keep the font sharp and blocky! */
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+}
+
+.pixelify-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #90EE90; /* A nice light green color */
+    
+    /* Keep it sharp! */
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    image-rendering: pixelated;
+}
+
+    
+.pixelify-bold {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 700; /* Makes the font bolder */
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    image-rendering: pixelated;
+    text-decoration: none;
+    }
+
+.stars {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+.floating {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  top: 90px; 
+  left: 100px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cici-thumbs-up{
+    position: absolute;
+    height: 275px;
+    width: 275px;
+    top:670px;
+    padding: 20px;
+    padding-left: 50px;
+
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.notice{
+    display: flex;
+    font-size: 18px;
+    color:skyblue;
+}
+.webname
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.webbody{
+    padding: 20px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; 
+    gap:15px;
+}
+
+.stuff
+{     
+    overflow-y: scroll;
+    align-items: stretch;
+    padding-top: .5em;
+    padding-left:1em;
+    padding-right: .7em;
+    border:2px solid white;
+    border-radius: 5px;
+    margin-top: 32px;
+    width: 300px;
+    height:350px;
+    color: white;    
+}
+
+.titles{
+    color: #FFFF00;
+    font-size: 2.1rem;
+}
+
+.inside-my-stuff{
+    padding-top: .3rem;
+    display:flex;
+    flex-direction: column;
+    margin: .5em;
+}
+
+a.links{
+    width: 200px;
+    margin-bottom: 6px;
+    position: relative;
+    font-size: 1.8rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-spacing-trim: .5px;
+    transition: font-style 0.2s ease; 
+}
+
+.inside-my-stuff a:hover{
+    font-style: italic;
+    color:red;
+}
+
+.main-thing{
+    margin: 0;
+    margin-top: 32px;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    border: 2px solid rgb(117, 117, 124);
+    border-radius: 5px;
+    background-color: rgb(117, 117, 124);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 125px 50px 250px 90px 315px 315px auto;
+
+}
+
+p.stuff-paragraph{
+    height:150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: black;
+    color:yellow;
+    padding: 10px;
+}
+
+.welcome-text{
+    margin-top: 10px;
+    font-size: 4rem;
+    width: 100%;
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-anim-text{
+    background-image: url('');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform .2s ease; 
+    animation: GoToRight 7s ease-in-out 0s infinite normal none; 
+    
+}
+
+.body-text-container{
+    padding:20px;
+    padding-bottom: 0;
+    color:wheat;
+}
+
+.main-stuff-topic{
+    margin:0;
+    font-size: 28px;
+}
+
+div#ABOUT {
+    overflow-y: scroll;
+    height:315px;
+}
+div#UPDATES{
+    overflow-y: scroll;
+    height:200px;
+}
+
+p.stuff-body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: black;
+    color:yellow;
+    padding: 10px;
+}
+div#NEKO-PUNCH{
+    height: fit-content;
+    
+}
+
+.stats-box{
+    margin: 2px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border:2px dashed red; 
+    background-image: url("https://9bafdc64-fce5-4e00-a614-de831c332b70.mdnplay.dev/shared-assets/images/examples/lizard.png");
+}
+ 
+section.stats-box p{
+    font-size: 22px;
+    margin:0;
+    color:tomato;
+    
+    text-shadow: 0.3em 0.3em 0.3em black;
+}
+
+#HOME p.stuff-body{
+    height:150px;
+}
+#INSPIRATION p.stuff-body{
+    height:250px;
+}
+#ABOUT p.stuff-body{
+    height:250px; 
+}
+#UPDATES p.stuff-body{
+    height:150px;
+}
+#NEKO-PUNCH p.stuff-body{
+    height:150px;
+}
+
+#COPYRIGHT{
+    font-size: 12px;
+    padding-top: 3px;
+    background-color: rgba(46, 46, 38, 0.932);
+    text-align: center;
+    color: white;
+}
+.community
+{   
+    margin-top: 32px; 
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 125px 230px 290px;
+    border-radius: 5px;
+}
+
+.me-class{
+    display: flex;
+    justify-content: center;
+    height: 125px;
+    width:100%;
+}
+.me-open{
+    height:auto;
+    border: 3px solid limegreen;
+    border-radius: 10px;
+}
+
+.for-you-section{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:210px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTdmdml1eGFpeHQxeDh1YjU2MWRsMm1uM3gzbDc1aDc5Z3dsOWtmNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9zExs2Q2h1EHfE4P6G/giphy.webp");
+    border: 2px solid grey;
+    border-radius: 5px;
+    
+}
+
+div.for-you-section p{
+    color: rgb(191, 0, 255);
+    padding-left: .5em ;
+    margin: 2px 0;
+    position: relative;
+}
+div.for-you-section a{
+    color:#39FF14;
+    text-decoration: none;
+    padding-left: .5em;
+    margin-bottom: .5em;
+    font-size: 22px;
+    padding-left: .5em;
+    width: 125px;
+    position: relative;
+}
+
+div.for-you-section a:hover{
+    font-style: italic;
+    color:red;
+}
+
+
+.comment-form-area{
+    padding: 4px 4px 0 4px;
+    border:2px solid  lightgreen;
+    border-radius: 4px;
+    height: 290px;
+    width: auto;
+    padding-right: 0;
+    display: grid;
+    grid-template-rows: 173px auto;
+}
+#COMMENT-AREA{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.indiv-comment{
+    color:red;
+}
+#USR{
+    font-size:12px;
+    color:green;
+}
+#DATE{
+    font-size:12px;
+    COLOR:yellow;
+}
+
+.form-box{
+    border: 2px solid pink;
+    border-radius: 3px;
+    padding: 6px;
+    background-color: pink;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+textarea {
+  width: 250px;
+}
+
+.Username-box{
+    height: 25px;
+    font-size:1em;
+    background-color: black;
+    color: wheat;
+}
+
+.Comment-text-box{
+    height: 50px;
+    font-family:sans-serif;
+    font-size:1.2em;
+}
+

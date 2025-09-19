@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaduhekISDIS</title>
+
+  <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  
+  <style>
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars-creation">
+
+    <div class="webname">
+      <img class="waduhek-gif" src="{{url_for('static', filename = 'css/waduhek_handwritten.gif')}}" alt="waduhek">
+      <!-- <img class="waduhek-gif" src="../static/css/waduhek_handwritten.gif" alt="waduhek">  -->
+    </div>
+    <div class="test-img">
+      <a href="https://youtube.com">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTdmdml1eGFpeHQxeDh1YjU2MWRsMm1uM3gzbDc1aDc5Z3dsOWtmNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/QTxF50wnvVaXDU3IJQ/giphy.webp" class="floating" alt="cyberpunk" >
+      </a>
+    </div>
+    
+    <div class="thumbs-up">
+      <img src="https://media.tenor.com/ec7YD7GdGywAAAAM/mlbb-cici.gif" class="cici-thumbs-up" alt="pani-poni">
+    </div>
+
+
+
+    <div class="webbody">
+      <div class="stuff">
+            <h2 class="titles pixel-font-headline">My stuff</h2>
+            <div class="inside-my-stuff">
+              <a href="#HOME" class="links pixelify-bold">Home</a>
+              <a href="#stats-box"class="links pixelify-bold">Stats</a>
+              <a href="#INSPIRATION" class="links pixelify-bold">Inspiration & Tour</a>
+              <a href="#ABOUT" class="links pixelify-bold">About Me</a>
+              <a href="#UPDATES" class="links pixelify-bold">Updates</a>
+              <a href="#NEKO-PUNCH" class="links pixelify-bold">neko-punch</a>
+            </div>
+            <h2 class="titles pixel-font-headline">Off site</h2>
+            <div class="inside-my-stuff">
+              <a href="home.html" class="links pixelify-bold">Offsite-1</a>
+              <a href="http://localhost:8000/comms"class="links pixelify-bold">Offsite-2</a>
+              
+            </div>
+            
+      </div>
+      <div class="main-thing">
+        <div class="welcome-text pixelify-text">  
+          <p>!!Welcome!!</p>   
+        </div>
+        <div>
+          <p class = "welcome-anim-text pixelify-text">!!!Site still under Construction!!!!! </p>
+        </div>
+
+        <div class = "body-text-container">
+          <section id="HOME">
+            <div class="main-stuff-topic pixelify-bold" style="color:chartreuse">Home</div>
+            <p class="stuff-body pixelify-text">
+              Handcoded pixels and ideas, straight from my brain(and some ideas from nice people on the internet).I'm sandesh and this site is my digital garden - a place for experiments, art, and random thoughts.You'll find blogs,and some music I like(later in the future as I learn how to add those).Scroll down to see what's new, or click around for hidden secrets(I like doing these).I am not so great writing long stuff but you will actually see this site growing as time goes on.
+            </p>
+          </section>
+        </div>
+
+        <section class="stats-box">
+          <p class="block-p pixelify-text">
+            Created : 9/14/2025   
+          </p>
+          <p class="block-p pixelify-text">
+            Last-Updated : NEVA   
+          </p>
+          <p class="block-p pixelify-text">  
+            Visitors : ABSOLUTE <span style="color:red">0</span>  
+          </p>
+        </section>
+
+        <div class="body-text-container">
+          <section id="INSPIRATION">
+            <div class=" main-stuff-topic pixelify-bold" style="color:cadetblue"">Inspiration</div>
+            <p class=" stuff-body pixelify-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eligendi. Vero sapiente maiores, sequi veritatis dignissimos est ipsum? Illo eos deserunt voluptas soluta dolorem nisi asperiores consequatur accusantium, ea a amet possimus quas dolor maiores veniam accusamus porro! Quibusdam aut veniam molestiae, voluptatem ratione alias facere omnis, placeat, aliquam harum blanditiis? Voluptatum iste eius nam quidem, sint magnam qui itaque tempore quos, sunt sit officiis quod veritatis modi exercitationem minus deleniti vitae velit reprehenderit. Vitae et, quo aliquid unde architecto non, aut repellat quibusdam corporis, quos facere? Quis, reprehenderit consectetur aut sunt quam quidem, corporis corrupti unde error ea provident!
+            </p>
+          </section>
+        </div>
+
+        <div class = "body-text-container">
+          <section id="ABOUT">
+            <div class="main-stuff-topic pixelify-bold" style="color:black">About Me</div>
+            <p class="stuff-body about-body pixelify-text">
+            Name: Sandesh <br>
+            Country: Nepal <br>
+            Hobby: Travelling and just laying around. <br>
+            </p>
+          </section>
+        </div>
+
+        <div class = "body-text-container">
+          <section id="UPDATES">
+            <div class="main-stuff-topic pixelify-bold" style="color:red">Updates</div>
+            <p class="stuff-body pixelify-text">
+              <span style="color: blueviolet;">September 15 2025</span> <br><br>
+              On this update I completed basic skeleton of this site , basically finished creating all the dummy placeholders, and actual contents will take those place lates. Thank you for bracing with me and hope you will continue to do so in the future. <br>
+            </p>
+          </section>
+        </div>
+
+        <div class = "body-text-container">
+          <section id="NEKO-PUNCH">
+            <div class="main-stuff-topic pixelify-bold" style="color:beige">NEKO PUNCHI</div>
+            <p class="stuff-body pixelify-text">
+              As you all know this section will contain goated cat pics.
+            
+            </p>
+          </section>
+        </div>
+        <div id="COPYRIGHT" class="pixel-font-headline">No copyright, you can steal anything from here.</div>
+      </div>
+
+      <div class="community">
+        <div class="me-class">
+          <img class = "me-open"src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjFqdHd1OXR0eGR1bDM4aWtleG0xYWtyZHc3cWIxajZrN2hqZnJrbiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/CdUPebPzF2kOQ/100.webp" alt="open">
+        </div>
+        <div class="for-you-section">
+          <p class="titles pixelify-bold">For You</p>
+          <a class="links pixelify-text" href="drawing-thingy">Draw It!</a>
+          <a class="links pixelify-text" href="newsletter-thngy">say something</a>
+          <a class="links pixelify-text" href="newsletter-thngy">Newsletter</a>
+          <span class="notice pixelify-text" href="newsletter-thngy">Other content will be added later.
+          </span>
+        </div>
+        <div class="comment-form-area">
+          <!-- <table border="1" class="Comment-table">
+            {% for comments in all_comments %}
+              <tr>
+                <th class="comment-headers">Username</th>
+                <td id = "USR" class="actual-comment">{{ comments.username }}</td>
+              </tr>
+              <tr>
+                <th class="comment-headers">Comment</th>
+                <td id = "COMMENT" class="actual-comment">{{ comments.comment }}</td>
+              </tr>
+              <tr>
+                <th class="comment-headers">Date</th>
+                <td id = "DATE" class="actual-comment">{{ comments.date_commented.date() }}</td>
+              </tr>
+              <tr><td colspan="2" style="background-color:#ccc;"></td></tr> 
+            {% endfor %}
+          </table> -->
+          <div id="COMMENT-AREA">
+            {% for comments in all_comments %}
+              <div class="indiv-comment pixelify-text"><span id="DATE">{{comments.date_commented.date() }} </span> <br> <span id = "USR" class = "Username">{{comments.username}}</span> : <span>{{comments.comment}} </span></div>
+              <span class="pixelify-text">***************************************************************</span>
+              {% endfor %}
+          </div>
+          <div id="INTERACTION">
+            <form action="/" method="POST" class="form-box">
+              <div class = "Username">
+                <textarea class = "Username-box pixelify-text" name="Username" id="Username">Your username please</textarea>
+              </div>
+              <div>
+                <textarea class = "Comment-text-box pixelify-text" name="Comments" id="COMMENT" ">Hey... say something!</textarea>
+              </div>
+              <input type="Submit" value="Submit">
+            </form>
+          </div>
+        <div>
+    </div>
+
+      <script>
+        const numStars = 200;
+        for (let i = 0; i < numStars; i++) {
+          const star = document.createElement("div");
+          star.className = "stars";
+          star.style.top = Math.random() * window.innerHeight + "px";
+          star.style.left = Math.random() * window.innerWidth + "px";
+          star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+          document.body.appendChild(star);
+        }
+        
+        window.onload = function () {
+          const container = document.getElementById("COMMENT-AREA");
+          container.scrollTop = container.scrollHeight;
+        };
+
+      </script>
+  </div>
+</body>
+</html>
