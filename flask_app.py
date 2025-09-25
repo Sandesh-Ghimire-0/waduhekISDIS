@@ -42,9 +42,9 @@ def gallery():
     return render_template('cat.html')
 
 reddit = praw.Reddit(
-        client_id = os.environ["client_id"],
-        client_secret = os.environ["client_secret"],
-        user_agent="my-app by u/YOUR_USERNAME"
+        client_id = os.environ("client_id"),
+        client_secret = os.environ("client_secret"),
+        user_agent="my-app by defiant_speaker"
 )
 
 @app.route('/meme')
