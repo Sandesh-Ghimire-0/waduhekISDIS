@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>waduhekISDISmeme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  
+  <link href="{{ url_for('static', filename='css/meme.css')}}" rel="stylesheet">
+  <style>
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+    <div class="everything">
+        <h2 class="pixel-font-headline">Random Meme</h2>
+        <div class="image">
+            <img src="{{ img_url }}"  alt="reddit_image">
+        </div>
+        <br>
+        <a class="button pixelify-text" href="/meme">Next Meme</a>
+    </div>
+
+    <script>
+        const numStars = 200;
+        for (let i = 0; i < numStars; i++) {
+          const star = document.createElement("div");
+          star.className = "stars";
+          star.style.top = Math.random() * window.innerHeight + "px";
+          star.style.left = Math.random() * window.innerWidth + "px";
+          star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+          document.body.appendChild(star);
+        }
+        
+        window.onload = function () {
+          const container = document.getElementById("COMMENT-AREA");
+          container.scrollTop = container.scrollHeight;
+        };
+
+      </script>
+</body>
+</html>

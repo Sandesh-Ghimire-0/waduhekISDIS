@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    scrollbar-width: 0px;
 }
 
 @keyframes GoToRight{
@@ -47,12 +48,63 @@ body{
     
 .pixelify-bold {
     font-family: 'Pixelify Sans', sans-serif;
-    font-weight: 700; /* Makes the font bolder */
+    font-weight: 700; 
     font-smooth: never;
     -webkit-font-smoothing: none;
     image-rendering: pixelated;
     text-decoration: none;
-    }
+}
+
+.construction-target {
+    
+    position: relative;
+    cursor: pointer;
+}
+
+.construction-target::after {
+    content: "!! Under construction !!"; 
+    position: absolute;
+
+    left: 70%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%) translateY(8px);
+    background: #111;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+    z-index: 1;
+}
+
+.construction-target:hover::after,
+.hover-construction:focus::after {
+  color: yellow;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.construction-target::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.construction-target:hover::before,
+.construction-target:focus::before {
+    opacity: 1;
+}
 
 .stars {
     width: 2px;
@@ -101,7 +153,7 @@ body{
 
 
 .webbody{
-    padding: 20px;
+    margin-bottom: 10px;
     height: 700px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr; 
@@ -117,9 +169,9 @@ body{
     padding-right: .7em;
     border:2px solid white;
     border-radius: 5px;
-    margin-top: 32px;
+    margin-top: 50px;
     width: 300px;
-    height:350px;
+    height:345px;
     color: white;    
 }
 
@@ -182,11 +234,12 @@ p.stuff-paragraph{
     margin-top: 10px;
     font-size: 4rem;
     width: 100%;
-    color: purple;
+   color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .welcome-anim-text{
     background-image: url('');
     display: flex;
@@ -209,14 +262,6 @@ p.stuff-paragraph{
     font-size: 28px;
 }
 
-div#ABOUT {
-    overflow-y: scroll;
-    height:315px;
-}
-div#UPDATES{
-    overflow-y: scroll;
-    height:200px;
-}
 
 p.stuff-body{
     overflow-y: scroll;
@@ -224,12 +269,8 @@ p.stuff-body{
     border: 2px solid grey;
     border-radius: 10px;
     background-color: black;
-    color:yellow;
+    color:#AEC6CF;
     padding: 10px;
-}
-div#NEKO-PUNCH{
-    height: fit-content;
-    
 }
 
 .stats-box{
@@ -258,10 +299,22 @@ section.stats-box p{
     height:250px;
 }
 #ABOUT p.stuff-body{
+    
     height:250px; 
 }
+.about-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #UPDATES p.stuff-body{
     height:150px;
+}
+
+.update-date{
+    color: brown;
+    border-bottom:2px dotted white;
 }
 #NEKO-PUNCH p.stuff-body{
     height:150px;
@@ -290,14 +343,15 @@ section.stats-box p{
     width:100%;
 }
 .me-open{
-    height:auto;
+    margin-top: 17px;
+    height:110px;
     border: 3px solid limegreen;
     border-radius: 10px;
 }
 
 .for-you-section{
     overflow-y: scroll;
-    overflow-x: hidden;
+    
     height:210px;
     display: flex;
     flex-direction: column;
@@ -314,7 +368,7 @@ div.for-you-section p{
     margin: 2px 0;
     position: relative;
 }
-div.for-you-section a{
+div.for-you-section a,div.for-you-section .comment-reminder{
     color:#39FF14;
     text-decoration: none;
     padding-left: .5em;
@@ -323,6 +377,11 @@ div.for-you-section a{
     padding-left: .5em;
     width: 125px;
     position: relative;
+}
+
+div.for-you-section .comment-reminder{
+    color: red;
+    width:200px;
 }
 
 div.for-you-section a:hover{
@@ -380,8 +439,8 @@ textarea {
 }
 
 .Comment-text-box{
+    color: red;
     height: 50px;
-    font-family:sans-serif;
     font-size:1.2em;
 }
 

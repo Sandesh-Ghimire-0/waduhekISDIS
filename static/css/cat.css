@@ -1,0 +1,49 @@
+body{
+    font-family: system-ui;
+    background-image: url('cat-bg.webp');
+}
+
+.bgv{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.catbox{
+    position: fixed;
+    right: 20rem;
+    bottom: 1rem;
+    top: 4rem;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: rgba(255, 255, 255, 0.658);
+    backdrop-filter: blur(2rem);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0rem 4rem 5rem rgba(54, 54, 54, 0.753);
+    
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.margin{
+    display: block;
+    width: 20rem;
+    margin-inline: .3rem;
+}
+.catbox img{
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-bottom: .5rem;
+    transition: 0.25s;
+}
+
+.catbox img:hover{
+    transform: scale(1.03);
+    box-shadow: 0rem 0rem 3rem rgba(255, 255, 255, 0.685);
+}

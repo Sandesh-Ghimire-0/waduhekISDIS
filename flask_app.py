@@ -1,7 +1,11 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 from datetime import datetime,timezone
-from flask_sqlalchemy import SQLAlchemy 
+from flask_sqlalchemy import SQLAlchemy
+import praw, random, os
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///comments.db'
 db = SQLAlchemy(app)
@@ -32,6 +36,27 @@ def comment():
     else:
         all_comments = Commentzzz.query.order_by(Commentzzz.date_commented).all()
         return render_template('index.html', all_comments = all_comments)
+
+@app.route('/gallery', methods=['POST', 'GET'])
+def gallery():
+    return render_template('cat.html')
+
+reddit = praw.Reddit(
+    client_id = os.environ["client_id"],
+    client_secret = os.environ["client_secret"],
+    user_agent = os.environ["user_agent"]
+)
+
+@app.route('/meme')
+def get_image():
+    subreddit = reddit.subreddit("memes")
+    submissions = list(subreddit.hot(limit=100))
+    images = [s.url for s in submissions if s.url.endswith((".jpg", ".png", ".gif"))]
+    
+    if not images:
+        return jsonify({"error": "No images found"})
+    img_url = random.choice(images)
+    return render_template('meme.html', img_url=img_url)
 
 if (__name__=='__main__'):
     with app.app_context():

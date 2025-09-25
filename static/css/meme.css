@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.everything{
+    margin-top: 40px;
+    top:90px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(214, 4, 39);
+    border-radius: 5px;
+    background-color: rgb(107, 107, 107);
+}
+
+.pixel-font-headline {
+  font-family: 'Press Start 2P', monospace; /* Use 2P, with monospace as a backup */
+  
+  /* IMPORTANT: Add these lines to keep the font sharp and blocky! */
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  image-rendering: pixelated;
+}
+
+.pixelify-text {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #90EE90; /* A nice light green color */
+    
+    /* Keep it sharp! */
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    image-rendering: pixelated;
+}
+
+    
+.pixelify-bold {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 700; /* Makes the font bolder */
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    image-rendering: pixelated;
+    text-decoration: none;
+}
+h2{
+    margin:4px 0 4px 0;
+}
+
+img{
+    width: 500px;
+    height : 500px;
+}
+.button{
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Amazon Ember",sans-serif;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.button:hover {
+    background-color: #f7fafa;
+}
+
+.button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+}
