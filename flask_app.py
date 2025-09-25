@@ -44,7 +44,7 @@ def gallery():
 reddit = praw.Reddit(
         client_id = os.environ["client_id"],
         client_secret = os.environ["client_secret"],
-        user_agent="my-app by defiant_speaker"
+        user_agent="my_app:v1.0 (by u/defiant_speaker)"
 )
 
 @app.route('/meme')
