@@ -56,8 +56,8 @@ def get_image():
     if not images:
         return jsonify({"error": "No images found"})
     img_url = random.choice(images)
-    #return render_template('meme.html', img_url=img_url)
-    return "<h2>hello</h2>"
+    return render_template('meme.html', img_url=img_url)
+    
 
 if (__name__=='__main__'):
     with app.app_context():
