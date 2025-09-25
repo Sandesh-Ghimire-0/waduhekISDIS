@@ -42,8 +42,8 @@ def gallery():
     return render_template('cat.html')
 
 reddit = praw.Reddit(
-        client_id = os.environ("client_id"),
-        client_secret = os.environ("client_secret"),
+        client_id = os.environ["client_id"],
+        client_secret = os.environ["client_secret"],
         user_agent="my-app by defiant_speaker"
 )
 
