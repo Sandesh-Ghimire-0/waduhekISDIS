@@ -42,9 +42,9 @@ def gallery():
     return render_template('cat.html')
 
 reddit = praw.Reddit(
-    client_id = os.environ["client_id"],
-    client_secret = os.environ["client_secret"],
-    user_agent = os.environ["user_agent"]
+        client_id = os.environ["client_id"],
+        client_secret = os.environ["client_secret"],
+        user_agent="my-app by u/YOUR_USERNAME"
 )
 
 @app.route('/meme')
@@ -56,9 +56,10 @@ def get_image():
     if not images:
         return jsonify({"error": "No images found"})
     img_url = random.choice(images)
-    return render_template('meme.html', img_url=img_url)
+    #return render_template('meme.html', img_url=img_url)
+    return "<h2>hello</h2>"
 
 if (__name__=='__main__'):
     with app.app_context():
         db.create_all()
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=5000, debug=True)
