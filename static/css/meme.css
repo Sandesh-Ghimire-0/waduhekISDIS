@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+.stars {
+    width: 2px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.5;
+}
+
 body{
     display: flex;
     justify-content: center;
